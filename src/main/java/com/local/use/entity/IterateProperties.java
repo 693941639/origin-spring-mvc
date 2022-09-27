@@ -19,7 +19,7 @@ abstract public class IterateProperties {
             for (PropertyDescriptor pd : info.getPropertyDescriptors()) {
                 Method method = pd.getReadMethod();
 
-                stringBuilder.append("\"").append(pd.getName()).append("\"").append(":").append(method.invoke(this));
+                stringBuilder.append("\"").append(pd.getName()).append("\"").append(":").append(method.invoke(this)).append(",");
             }
 
             stringBuilder.append("}");

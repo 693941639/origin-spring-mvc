@@ -13,8 +13,7 @@ public class RestTestController {
     TestService testService;
 
     @GetMapping("/test/{id}")
-    public String test(@PathVariable("id") long id) {
-        Test test = testService.getTestById(id);
-        return "{\"code\": 200, \"data\": " + test.toString() + "}";
+    public Test test(@PathVariable("id") long id) {
+        return testService.getTestById(id);
     }
 }

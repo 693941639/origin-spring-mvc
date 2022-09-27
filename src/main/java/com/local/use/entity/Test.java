@@ -1,10 +1,15 @@
 package com.local.use.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.sql.Timestamp;
 
 public class Test extends IterateProperties {
     private long id;
     private String a;
+
+    @JsonIgnore
     private long b;
     private int c;
     private String d;
